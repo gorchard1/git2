@@ -12,3 +12,6 @@ def sqrt(a):
     if a < 0:
         raise ValueError("Корень из отрицательного числа")
     return math.sqrt(a)
+
+def floor(a):
+    return math.floor(a)
