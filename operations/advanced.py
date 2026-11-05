@@ -15,3 +15,6 @@ def sqrt(a):
 
 def floor(a):
     return math.floor(a)
+
+def ceil(a):
+    return math.ceil(a)
