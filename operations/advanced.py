@@ -18,3 +18,11 @@ def floor(a):
 
 def ceil(a):
     return math.ceil(a)
+
+OPERATIONS = {
+    '%': mod,
+    '^': power,
+    'sqrt': sqrt,
+    'floor': floor,
+    'ceil': ceil,
+}
