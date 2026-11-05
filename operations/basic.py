@@ -21,3 +21,12 @@ def sin(a):
 
 def cos(a):
     return math.cos(a)
+
+OPERATIONS = {
+    '+': add,
+    '-': sub,
+    '*': mul,
+    '/': div,
+    'sin': sin,
+    'cos': cos,
+}
