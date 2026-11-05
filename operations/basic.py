@@ -10,3 +10,8 @@ def sub(a, b):
 
 def mul(a, b):
     return a * b
+
+def div(a, b):
+    if b == 0:
+        raise ZeroDivisionError("Деление на ноль")
+    return a / b
