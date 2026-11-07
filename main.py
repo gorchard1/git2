@@ -5,7 +5,7 @@ from operations import ALL_OPERATIONS, Memory
 
 
 class Calculator:
-    def init(self, root):
+    def __init__(self, root):
         self.root = root
         root.title("Калькулятор")
         self.expr = ""
@@ -97,11 +97,11 @@ class Calculator:
         self._show()
 
     def _show(self):
-        #self.display.delete(0, tk.END)
+        self.display.delete(0, tk.END)
         self.display.insert(0, self.expr)
 
 
-if __name__== "main":
+if __name__== "__main__":
     root = tk.Tk()
     Calculator(root)
     root.mainloop()
