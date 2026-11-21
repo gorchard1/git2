@@ -85,8 +85,13 @@ class Calculator:
 
     def mem(self, cmd):
         try:
-            value = float(self.expr) if self.expr else 0.0
-            self.expr = str(getattr(self.memory, cmd)(value))
+            method = getattr(self.memory, cmd)
+            if cmd in ("mr", "mc"):
+                result = method()
+            else:
+                value = float(self.expr) if self.expr else 0.0
+                result = method(value)
+            self.expr = str(result)
             self._show()
         except Exception as e:
             messagebox.showerror("Ошибка", str(e))
