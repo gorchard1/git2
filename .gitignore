@@ -11,3 +11,5 @@ Thumbs.db
 # Артефакты сборки PyInstaller
 build/
 dist/
+installer_output/
+.spec
