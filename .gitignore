@@ -7,3 +7,7 @@ venv/
 .DS_Store
 Thumbs.db
 *.log
+
+# Артефакты сборки PyInstaller
+build/
+dist/
