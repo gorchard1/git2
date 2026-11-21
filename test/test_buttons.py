@@ -6,8 +6,8 @@ from main import Calculator
 
 class TestButtonClicks(unittest.TestCase):
     def setUp(self):
-        patcher_entry = patch("tkinter.Entry")
-        patcher_button = patch("tkinter.Button")
+        patcher_entry = patch("main.tk.Entry")
+        patcher_button = patch("main.tk.Button") 
         self.mock_entry = patcher_entry.start()
         self.mock_button = patcher_button.start()
         self.addCleanup(patcher_entry.stop)
@@ -130,7 +130,8 @@ class TestButtonClicks(unittest.TestCase):
         self.click("5")
         self.click("m+")
         self.assertEqual(self.calc.expr, "5.0")
-
+        
+        self.click("C") 
         self.click("3")
         self.click("m-")
         self.assertEqual(self.calc.expr, "2.0")
