@@ -27,15 +27,18 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-; Копируем наш собранный exe в папку установки
 Source: "C:\Users\Sad_Scorpion\Desktop\git2\dist\Calculator.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Sad_Scorpion\Desktop\git2\myicon.ico"; DestDir: "{app}"; Flags: ignoreversion
+
 
 [Icons]
 ; Ярлык в меню Пуск
-Name: "{group}\Calculator"; Filename: "{app}\Calculator.exe"
+
+Name: "{group}\Calculator"; Filename: "{app}\Calculator.exe"; IconFilename: "{app}\myicon.ico"
+; Ярлык на рабочем столе
+Name: "{autodesktop}\Calculator"; Filename: "{app}\Calculator.exe"; IconFilename: "{app}\myicon.ico"; Tasks: desktopicon
+
 Name: "{group}\{cm:UninstallProgram,Calculator}"; Filename: "{uninstallexe}"
-; Ярлык на рабочем столе (создаётся только если отмечена галочка)
-Name: "{autodesktop}\Calculator"; Filename: "{app}\Calculator.exe"; Tasks: desktopicon
 
 [Run]
 ; Предложить запустить калькулятор сразу после установки
